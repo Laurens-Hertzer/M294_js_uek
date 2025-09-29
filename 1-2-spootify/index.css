@@ -18,3 +18,29 @@ body {
     background-color: lightgreen;
     padding: 20%;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#brand {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 0.4rem;
+        border-radius: 1rem;
+    }
+}
