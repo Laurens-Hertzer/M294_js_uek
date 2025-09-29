@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Game Store</title>
+</head>
+
+<body>
+	<h1>Game Store</h1>
+	<div id="game-of-the-day">
+		Fortnight
+	</div>
+	<h2>New Releases</h2>
+	<ul class="games">
+		<li>Doom Eternal</li>
+		<li class="sale">Resident Evil Village</li>
+		<li>Ratchet & Clank: Rift Apart</li>
+		<li>Deathloop</li>
+	</ul>
+	<h2>Top Sellers</h2>
+	<ul class="games">
+		<li>PlayerUnknown's Battlegrounds</li>
+		<li>Grand Theft Auto V</li>
+		<li class="sale">Among Us</li>
+		<li>Minecraft</li>
+	</ul>
+	<h2>Free to Play</h2>
+	<ul class="games">
+		<li class="sale">Dota 2</li>
+		<li>Team Fortress 2</li>
+		<li>Apex Legends</li>
+		<li>Warframe</li>
+	</ul>
+</body>
+<script>
+	// 1. Alle Spiele im Bereich "Neuveröffentlichungen"
+	const newReleasesGames = document.querySelectorAll("h2:nth-of-type(1) + ul.games li");
+	console.log(newReleasesGames);
+
+	// 2. Das zweite Spiel im Bereich "Bestseller"
+	const secondTopSeller = document.querySelectorAll("h2:nth-of-type(2) + ul.games li")[1];
+	console.log(secondTopSeller);
+
+	// 3. Das letzte Spiel im Bereich "Kostenlos spielen"
+	const freeToPlayGames = document.querySelectorAll("h2:nth-of-type(3) + ul.games li");
+	const lastFreeToPlay = freeToPlayGames[freeToPlayGames.length - 1];
+	console.log(lastFreeToPlay);
+
+	// 4. Alle Listenelemente im Bereich "Bestseller"
+	const topSellersListItems = document.querySelectorAll("h2:nth-of-type(2) + ul.games li");
+	console.log(topSellersListItems);
+
+	// 5. Das h1-Element
+	const h1Element = document.getElementsByTagName("h1")[0];
+	console.log(h1Element);
+
+	// 6. Das game-of-the-day
+	const gameOfTheDay = document.getElementById("game-of-the-day");
+	console.log(gameOfTheDay);
+
+	// 7. Alle Spiele, die im Sale sind
+	const saleGames = document.querySelectorAll(".sale");
+	console.log(saleGames);
+</script>
+</html>
