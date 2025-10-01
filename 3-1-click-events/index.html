@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = 0;
+        let num2 = 0;
+        function handleClick() {
+            alert("Hallo, Welt");
+            document.querySelector("h1:first-of-type").textContent = num + 1;
+            num = num + 1;
+            // Ball auf die linke Seite des Rechtecks setzen
+            let ball = document.querySelector("#Rechteck img");
+            ball.style.position = "absolute";
+            ball.style.left = "0px";
+            ball.style.top = "50%";
+            ball.style.transform = "translateY(-50%)";
+            // Stelle sicher, dass das Rechteck positioniert ist
+            document.getElementById("Rechteck").style.position = "relative";
+        }
+
+        function handleClick2() {
+            alert("Hallo, Welt");
+            document.querySelector("h1:last-of-type").textContent = num2 + 1;
+            num2 = num2 + 1
+            // Ball auf die rechte Seite des Rechtecks setzen
+            let ball = document.querySelector("#Rechteck img");
+            ball.style.position = "absolute";
+            ball.style.left = "200px";
+            ball.style.top = "50%";
+            ball.style.transform = "translateY(-50%)";
+            // Stelle sicher, dass das Rechteck positioniert ist
+            document.getElementById("Rechteck").style.position = "relative";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>${num}</h1>
+    <h1>${num2}</h1>
+    <button onclick="handleClick()">Ball links</button>
+    <button onclick="handleClick2()">Ball rechts</button>
+    <div id="Rechteck">
+        <style>
+            #Rechteck {
+                width: 200px;
+                height: 100px;
+                background-color: green;
+                margin-top: 20px;
+            }
+        </style>
+        <img src="soccer-ball.png">
+
+    </div>
+</body>
+
+</html>

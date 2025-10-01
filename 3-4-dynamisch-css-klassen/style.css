@@ -1,0 +1,16 @@
+ol {
+    display: flex;
+    flex-wrap: wrap;
+}
+ol li {
+    margin: 20px;
+    border:solid 0.3rem;
+    border-color: green;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+.highlight {
+    border-color: red;
+    background-color: yellow;
+}

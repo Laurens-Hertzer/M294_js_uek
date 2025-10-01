@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let liste = [
+            "pictures/dire_straits.jpg",
+            "pictures/joe_public.jpg",
+            "pictures/kriss_kross.jpg",
+            "pictures/my_lovin.jpg",
+            "pictures/queen.jpg",
+            "pictures/save_the_best_for_last.jpg"
+        ];
+        let zeigListe = [];
+
+        function addthree() {
+            let start = zeigListe.length;
+            let end = Math.min(start + 3, liste.length);
+            for (let i = start; i < end; i++) {
+                zeigListe.push(liste[i]);
+                const img = document.createElement('img');
+                img.src = liste[i];
+                img.style.width = "100px";
+                img.style.margin = "5px";
+                document.querySelector('.pictures').appendChild(img);
+            }
+        }
+
+        function removethree() {
+            zeigListe.splice(0, 3);
+            const container = document.querySelector('.pictures');
+            for (let i = 0; i < 3; i++) {
+                if (container.firstChild) {
+                    container.removeChild(container.firstChild);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addthree()">add three more</button>
+    <button onclick="removethree()">remove first three</button>
+    <div class="pictures"></div>
+</body>
+</html>

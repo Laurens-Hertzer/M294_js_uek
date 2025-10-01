@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Transition</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: steelblue;
+      transition: all 2s ease-in-out; /* Übergangseffekt */
+    }
+
+    /* Startzustand */
+    .start {
+      transform: translateX(0);
+      background: steelblue;
+    }
+
+    /* Endzustand */
+    .end {
+      transform: translateX(200px);
+      background: tomato;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="transitionBox()">Klick mich</button>
+  <div class="box start"></div>
+
+  <script>
+    function transitionBox() {
+      const box = document.querySelector('.box');
+
+      // wenn die Box "end" hat → zurück zu "start"
+      if (box.classList.contains('end')) {
+        box.classList.remove('end');
+        box.classList.add('start');
+      } else {
+        // ansonsten von "start" → "end"
+        box.classList.remove('start');
+        box.classList.add('end');
+      }
+    }
+  </script>
+</body>
+</html>
